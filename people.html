@@ -299,57 +299,22 @@
       </div>
     </section>
 
-    <!-- Lab Seminars & Presentations Schedule -->
-    <section class="space-y-4 pt-4 border-t border-gray-100">
-      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-gray-100 pb-2">
-        <div>
-          <h2 class="text-lg font-bold text-gray-900">Lab Seminars &amp; Research Presentations Schedule</h2>
-          <p class="text-xs text-gray-500 mt-0.5">Bi-weekly technical presentations, literature surveys, and progress reports by DML researchers.</p>
-        </div>
-        <a href="./seminars.html" class="text-xs font-semibold text-sky-700 hover:underline shrink-0">
-          Full Colloquia Schedule &rarr;
-        </a>
-      </div>
-
-      <div class="overflow-x-auto border border-gray-200 rounded-lg shadow-2xs">
-        <table class="min-w-full divide-y divide-gray-200 text-xs text-left">
-          <thead class="bg-gray-50 font-semibold text-gray-700">
-            <tr>
-              <th scope="col" class="px-3.5 py-3">Session &bull; Date</th>
-              <th scope="col" class="px-4 py-3">Speaker 1 &bull; Topic</th>
-              <th scope="col" class="px-4 py-3">Speaker 2 &bull; Topic</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-gray-100 bg-white" id="seminars-table-body">
-            <!-- Injected via JS -->
-          </tbody>
-        </table>
-      </div>
-    </section>
-
   </main>
 
       <!-- Minimalist Academic Footer -->
   <footer class="border-t border-gray-200 py-6 mt-16 text-xs text-gray-500">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
-      <div>&copy; 2026 Data Mining Laboratory (DML) &bull; School of Computer Engineering, IUST.</div>
-      <nav class="flex flex-wrap items-center justify-center md:justify-end gap-x-3.5 sm:gap-x-4 gap-y-2">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col items-center justify-center gap-3 text-center">
+      <nav class="footer-nav">
         <a href="./index.html" class="hover:underline hover:text-gray-800 transition-colors">Home</a>
-        <span class="text-gray-300 hidden md:inline" aria-hidden="true">&bull;</span>
         <a href="./research.html" class="hover:underline hover:text-gray-800 transition-colors">Research &amp; Projects</a>
-        <span class="text-gray-300 hidden md:inline" aria-hidden="true">&bull;</span>
         <a href="./people.html" class="hover:underline hover:text-gray-800 transition-colors">People</a>
-        <span class="text-gray-300 hidden md:inline" aria-hidden="true">&bull;</span>
         <a href="./publications.html" class="hover:underline hover:text-gray-800 transition-colors">Publications</a>
-        <span class="text-gray-300 hidden md:inline" aria-hidden="true">&bull;</span>
         <a href="./seminars.html" class="hover:underline hover:text-gray-800 transition-colors">Seminars</a>
-        <span class="text-gray-300 hidden md:inline" aria-hidden="true">&bull;</span>
         <a href="./join.html" class="hover:underline hover:text-gray-800 transition-colors">Join Us</a>
-        <span class="text-gray-300 hidden md:inline" aria-hidden="true">&bull;</span>
         <a href="https://www.linkedin.com/company/iust-data-mining-lab/" target="_blank" rel="noopener noreferrer" class="hover:underline text-[#0a66c2] font-medium">DML LinkedIn</a>
-        <span class="text-gray-300 hidden md:inline" aria-hidden="true">&bull;</span>
         <a href="./contact.html" class="hover:underline hover:text-gray-800 transition-colors">Contact</a>
       </nav>
+      <div>&copy; 2026 Data Mining Laboratory (DML) &bull; School of Computer Engineering, IUST.</div>
     </div>
   </footer>
 
@@ -647,40 +612,6 @@
           renderHistoricalCatalog();
         });
       }
-    }
-
-    // Render Seminars
-    const semTbody = document.getElementById('seminars-table-body');
-    if (studentsData.seminars) {
-      semTbody.innerHTML = studentsData.seminars.map(sem => {
-        const isCompleted = sem.status === 'Completed';
-
-        return `
-          <tr class="hover:bg-gray-50/75 transition-colors">
-            <td class="px-3.5 py-3 font-mono text-gray-600 whitespace-nowrap align-top">
-              <div class="flex items-center gap-1.5">
-                <span class="font-bold text-gray-900">Session ${sem.session}</span>
-                ${isCompleted ? `
-                  <span class="text-[9px] font-semibold text-emerald-800 bg-emerald-50 px-1.5 py-0.2 rounded border border-emerald-200">
-                    Completed
-                  </span>
-                ` : ''}
-              </div>
-              <span class="text-[11px] text-gray-400 mt-0.5 block">${sem.date}</span>
-            </td>
-            <td class="px-4 py-3 text-gray-800 align-top">
-              <div class="font-semibold text-gray-900">${sem.speaker1}</div>
-              ${sem.topic1 ? `<div class="text-gray-500 text-[11px] mt-0.5">&ldquo;${sem.topic1}&rdquo;</div>` : ''}
-            </td>
-            <td class="px-4 py-3 text-gray-800 align-top">
-              ${sem.speaker2 ? `
-                <div class="font-semibold text-gray-900">${sem.speaker2}</div>
-                ${sem.topic2 ? `<div class="text-gray-500 text-[11px] mt-0.5">&ldquo;${sem.topic2}&rdquo;</div>` : ''}
-              ` : '<span class="text-gray-300 italic">Open Slot</span>'}
-            </td>
-          </tr>
-        `;
-      }).join('');
     }
 
     // Initial render
