@@ -51,7 +51,7 @@
     {
       "id": "gen-07",
       "speaker": "Peyman Attarsayah",
-      "mentor": "Dr. Majid Asgari & Prof. Minaei",
+      "mentor": "Dr. Majid Asgari-Bidhendi & Prof. Minaei",
       "title": "Entity Linking Improvement Based on the Retriever-Reader Paradigm",
       "date": "1404/12/03 (Feb 22, 2026)",
       "status": "Completed"
@@ -67,7 +67,7 @@
     {
       "id": "gen-09",
       "speaker": "Negin Karimi",
-      "mentor": "Dr. Ghafoori & Prof. Minaei",
+      "mentor": "Dr. Ghafouri & Prof. Minaei",
       "title": "A Hybrid Method Based on Graph Neural Networks and LLMs for Multi-Hop QA Accuracy Improvement",
       "date": "1405/03/31 (Jun 20, 2026)",
       "status": "Completed"
@@ -91,7 +91,7 @@
     {
       "id": "gen-12",
       "speaker": "Arefeh Rajabian",
-      "mentor": "Dr. Zohreh Motashaker & Prof. Minaei",
+      "mentor": "Dr. Zohreh Moteshaker & Prof. Minaei",
       "title": "Improving Reasoning in Large Language Models Using Prompt Engineering or Model Tuning Methods",
       "date": "1405/05/04 (Jul 25, 2026)",
       "status": "Completed"
@@ -163,7 +163,7 @@
     {
       "id": "gen-21",
       "speaker": "Ali Aghaei",
-      "mentor": "Dr. Majid Asgari & Prof. Minaei",
+      "mentor": "Dr. Majid Asgari-Bidhendi & Prof. Minaei",
       "title": "Inference Paradigms in Multimodal Reasoning",
       "date": "1405/07/26 (Oct 17, 2026)",
       "status": "Scheduled"
@@ -171,7 +171,7 @@
     {
       "id": "gen-22",
       "speaker": "Pouya Kavosh",
-      "mentor": "Dr. Majid Asgari & Prof. Minaei",
+      "mentor": "Dr. Majid Asgari-Bidhendi & Prof. Minaei",
       "title": "Enhancing Reliability in Multimodal AI Software Systems via Chain-of-Thought Reasoning",
       "date": "1405/07/03 (Sep 24, 2026)",
       "status": "Scheduled"
@@ -179,7 +179,7 @@
     {
       "id": "gen-23",
       "speaker": "Mohammad Hossein Karimi",
-      "mentor": "Dr. Majid Asgari & Prof. Minaei",
+      "mentor": "Dr. Majid Asgari-Bidhendi & Prof. Minaei",
       "title": "Small Language Models for Intelligent Information Retrieval in Visually-Rich Documents (VRD)",
       "date": "1405/07/10 (Oct 01, 2026)",
       "status": "Scheduled"
@@ -187,7 +187,7 @@
     {
       "id": "gen-24",
       "speaker": "Mohammad Bakhtiari",
-      "mentor": "Dr. Majid Asgari & Prof. Minaei",
+      "mentor": "Dr. Majid Asgari-Bidhendi & Prof. Minaei",
       "title": "Cost-Effective and Simplified Graph Construction in GraphRAG Systems",
       "date": "1405/07/17 (Oct 08, 2026)",
       "status": "Scheduled"
@@ -195,7 +195,7 @@
     {
       "id": "gen-25",
       "speaker": "Amirhossein Karami",
-      "mentor": "Dr. Majid Asgari & Prof. Minaei",
+      "mentor": "Dr. Majid Asgari-Bidhendi & Prof. Minaei",
       "title": "World Models in Multimodal AI: Reasoning and Planning in Latent Space",
       "date": "1405/07/24 (Oct 15, 2026)",
       "status": "Scheduled"
@@ -203,7 +203,7 @@
     {
       "id": "gen-26",
       "speaker": "Mohadeseh Emadi",
-      "mentor": "Dr. Majid Asgari, Dr. Shahbazi & Prof. Minaei",
+      "mentor": "Dr. Majid Asgari-Bidhendi, Dr. Shahbazi & Prof. Minaei",
       "title": "Performance Enhancement of Knowledge Graph-Augmented RAG using Reinforcement Learning",
       "date": "1405/08/01 (Oct 22, 2026)",
       "status": "Scheduled"
@@ -211,7 +211,7 @@
     {
       "id": "gen-27",
       "speaker": "Kian Omoomi",
-      "mentor": "Dr. Majid Asgari & Prof. Minaei",
+      "mentor": "Dr. Majid Asgari-Bidhendi & Prof. Minaei",
       "title": "User Representation Methods in Personalized Text Classification",
       "date": "1405/08/08 (Oct 29, 2026)",
       "status": "Scheduled"
@@ -219,7 +219,7 @@
     {
       "id": "gen-28",
       "speaker": "Alireza Mohammadi",
-      "mentor": "Dr. Majid Asgari & Prof. Minaei",
+      "mentor": "Dr. Majid Asgari-Bidhendi & Prof. Minaei",
       "title": "Uncertainty-Aware Retrieval-Augmented Generation",
       "date": "1405/08/15 (Nov 05, 2026)",
       "status": "Scheduled"
@@ -227,7 +227,7 @@
     {
       "id": "gen-29",
       "speaker": "Fatemeh Yousefi",
-      "mentor": "Dr. Majid Asgari & Prof. Minaei",
+      "mentor": "Dr. Majid Asgari-Bidhendi & Prof. Minaei",
       "title": "Multimodal Graph Retrieval-Augmented Generation: Architectures and Applications",
       "date": "1405/08/22 (Nov 12, 2026)",
       "status": "Scheduled"
@@ -235,7 +235,7 @@
     {
       "id": "gen-30",
       "speaker": "Maryam Mortazavi Nik",
-      "mentor": "Dr. Majid Asgari & Prof. Minaei",
+      "mentor": "Dr. Majid Asgari-Bidhendi & Prof. Minaei",
       "title": "Consistency Checking in Semantic Web via Hybrid Solvers and Graph LLMs",
       "date": "Scheduled",
       "status": "Scheduled"
@@ -243,7 +243,7 @@
     {
       "id": "gen-31",
       "speaker": "Amirhossein Bagheri",
-      "mentor": "Dr. Majid Asgari & Prof. Minaei",
+      "mentor": "Dr. Majid Asgari-Bidhendi & Prof. Minaei",
       "title": "Late-Interaction Multimodal Document Retrieval Systems",
       "date": "Scheduled",
       "status": "Scheduled"
