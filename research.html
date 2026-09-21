@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research &amp; Projects • Data Mining Laboratory (DML) • IUST</title>
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body class="bg-white text-gray-800 font-sans antialiased min-h-screen flex flex-col">
+
+  <!-- Minimalist Academic Header -->
+  <header class="border-b border-gray-200 py-6">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 mb-4">
+        <div>
+          <a href="/index.html" class="text-2xl font-bold text-gray-900 hover:text-sky-700 transition-colors">
+            Data Mining Laboratory (DML)
+          </a>
+          <div class="text-sm text-gray-500 font-medium mt-0.5">
+            School of Computer Engineering &bull; Iran University of Science and Technology (IUST)
+          </div>
+        </div>
+        <div class="flex items-center gap-3 text-xs font-mono">
+          <a href="https://www.linkedin.com/company/iust-data-mining-lab/" target="_blank" rel="noopener noreferrer" class="text-[#0a66c2] hover:underline font-semibold flex items-center gap-1">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.6a1.67 1.67 0 1 0 0 3.34 1.67 1.67 0 0 0 0-3.34z"/></svg>
+            <span>DML LinkedIn</span>
+          </a>
+          <span class="text-gray-300">|</span>
+          <span class="text-gray-400">dml.iust.ac.ir</span>
+        </div>
+      </div>
+
+      <nav class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium border-t border-gray-100 pt-3">
+        <a href="/index.html" class="text-gray-600 hover:text-sky-700">Home</a>
+        <a href="/research.html" class="text-sky-700 font-bold">Research &amp; Projects</a>
+        <a href="/people.html" class="text-gray-600 hover:text-sky-700">People</a>
+        <a href="/publications.html" class="text-gray-600 hover:text-sky-700">Publications</a>
+        <a href="/seminars.html" class="text-gray-600 hover:text-sky-700">Seminars</a>
+        <a href="/join.html" class="text-gray-600 hover:text-sky-700">Join Us</a>
+        <a href="/contact.html" class="text-gray-600 hover:text-sky-700">Contact</a>
+        <span class="text-gray-300">|</span>
+        <a href="http://minaei.iust.ac.ir/" target="_blank" class="text-gray-500 hover:text-gray-800 text-xs">Prof. Minaei Page &rarr;</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 max-w-5xl mx-auto px-4 sm:px-6 py-10 w-full space-y-12">
+    
+    <!-- Page Header & Quick Navigation Jumpers -->
+    <div class="space-y-3 border-b border-gray-100 pb-4">
+      <h1 class="text-2xl font-bold text-gray-900">Research &amp; Projects</h1>
+      <p class="text-sm text-gray-600 leading-relaxed max-w-3xl">
+        DML investigates foundational algorithms and software architectures across <strong>Large Language Models (LLMs)</strong>, <strong>Knowledge Graphs</strong>, <strong>Information Retrieval</strong>, and <strong>Recommender Systems</strong>. Below is a unified view of our core research directions, ongoing student thesis topics, and landmark open-source systems.
+      </p>
+      <div class="flex flex-wrap items-center gap-2 pt-1 text-xs">
+        <span class="text-gray-400 font-medium">Quick Jump:</span>
+        <a href="#themes" class="px-2.5 py-1 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded border border-gray-200/80 transition-colors">Core Directions</a>
+        <a href="#active-research" class="px-2.5 py-1 bg-sky-50 hover:bg-sky-100 text-sky-800 rounded border border-sky-200 transition-colors font-medium">Active Student Investigations</a>
+        <a href="#systems" class="px-2.5 py-1 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded border border-gray-200/80 transition-colors">Landmark Systems &amp; Datasets</a>
+      </div>
+    </div>
+
+    <!-- Section 1: Core Research Themes -->
+    <section id="themes" class="space-y-6 pt-2">
+      <div class="border-b border-gray-200/80 pb-2">
+        <h2 class="text-xl font-bold text-gray-900 flex items-center gap-2">
+          <span>Core Research Directions</span>
+        </h2>
+        <p class="text-xs text-gray-500 mt-0.5">Theoretical and experimental frameworks established at the laboratory.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Theme 1 -->
+        <div class="bg-gray-50/70 border border-gray-200/80 p-5 rounded-lg space-y-2.5 flex flex-col justify-between">
+          <div class="space-y-2">
+            <div class="text-xs font-mono font-bold text-sky-700">01. Natural Language Processing &amp; LLMs</div>
+            <h3 class="text-base font-bold text-gray-900">Faithful RAG, Reasoning &amp; Multi-Hop QA</h3>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Mitigating hallucinations and multi-step reasoning failures in foundation models. We build iterative refinement loops (<strong>FAIR-RAG</strong>, <strong>FARSIQA</strong>) and multi-hop question answering benchmarks (<strong>PersianMHQA</strong> in <em>ACM TALIP</em>, <strong>Bactrainus</strong>) enforcing deductive chain validation.
+            </p>
+          </div>
+          <div class="pt-2 border-t border-gray-200/60 text-[11px] text-gray-500">
+            <strong>Key Focus:</strong> Preference Optimization &bull; Hallucination Mitigation &bull; Dense Retrieval &bull; Chain-of-Thought (CoT)
+          </div>
+        </div>
+
+        <!-- Theme 2 -->
+        <div class="bg-gray-50/70 border border-gray-200/80 p-5 rounded-lg space-y-2.5 flex flex-col justify-between">
+          <div class="space-y-2">
+            <div class="text-xs font-mono font-bold text-sky-700">02. Knowledge Representation</div>
+            <h3 class="text-base font-bold text-gray-900">Knowledge Graphs &amp; Neuro-Symbolic Reasoning</h3>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Constructing and reasoning over structured ontological bases. Home of <strong>FarsBase</strong> (100M+ RDF triples). We investigate sentence embedding link prediction with BGE (published in <em>Expert Systems with Applications</em>), ontology alignment, and prioritized default logic engines (<strong>Borhan</strong>).
+            </p>
+          </div>
+          <div class="pt-2 border-t border-gray-200/60 text-[11px] text-gray-500">
+            <strong>Key Focus:</strong> FarsBase &bull; Unsupervised Entity Alignment &bull; KG Compression &bull; Default Logic
+          </div>
+        </div>
+
+        <!-- Theme 3 -->
+        <div class="bg-gray-50/70 border border-gray-200/80 p-5 rounded-lg space-y-2.5 flex flex-col justify-between">
+          <div class="space-y-2">
+            <div class="text-xs font-mono font-bold text-sky-700">03. Information Systems &amp; Data Mining</div>
+            <h3 class="text-base font-bold text-gray-900">Recommender Systems &amp; Graph Analytics</h3>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Overcoming sparsity and the cold-start barrier in recommendation algorithms. We develop semantic profile expansion, fuzzy cluster ensembles, and memory-efficient data structures for massive scale-free network generation (<strong>Ball*-tree</strong> in <em>ACM SIGMOD</em>).
+            </p>
+          </div>
+          <div class="pt-2 border-t border-gray-200/60 text-[11px] text-gray-500">
+            <strong>Key Focus:</strong> Collaborative Filtering &bull; Cluster Stability &bull; Influence Maximization &bull; Graph Synthesis
+          </div>
+        </div>
+
+        <!-- Theme 4 -->
+        <div class="bg-gray-50/70 border border-gray-200/80 p-5 rounded-lg space-y-2.5 flex flex-col justify-between">
+          <div class="space-y-2">
+            <div class="text-xs font-mono font-bold text-sky-700">04. Computational Linguistics &amp; Corpora</div>
+            <h3 class="text-base font-bold text-gray-900">Digital Humanities &amp; Low-Resource Benchmarks</h3>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Standardizing resources for low-resource and classical Persian and Arabic literature. Initiated the <strong>Rezwan</strong> 1.2M narrative hadith corpus, <strong>NoorGhateh</strong> morphological segmentation benchmark, and <strong>PESTS</strong> cross-lingual semantic similarity datasets.
+            </p>
+          </div>
+          <div class="pt-2 border-t border-gray-200/60 text-[11px] text-gray-500">
+            <strong>Key Focus:</strong> Classical Morphology &bull; Semantic Textual Similarity &bull; Fact Verification &bull; Virastyar
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Active Student Investigations & Ongoing Topics -->
+    <section id="active-research" class="space-y-6 pt-4">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-gray-200/80 pb-2">
+        <div>
+          <h2 class="text-xl font-bold text-gray-900 flex items-center gap-2">
+            <span>Active Student Investigations &amp; Ongoing Topics</span>
+            <span class="text-xs font-mono font-normal bg-sky-100 text-sky-800 px-2 py-0.5 rounded-full" id="topics-count-badge">Loading...</span>
+          </h2>
+          <p class="text-xs text-gray-500 mt-0.5">
+            Individual thesis investigations and active research projects currently conducted by graduate members of the laboratory.
+          </p>
+        </div>
+        <a href="/people.html" class="text-xs text-sky-700 hover:underline shrink-0 font-medium">View Full Member Directory &rarr;</a>
+      </div>
+
+      <!-- Live Search and Topic Filter Chips for Active Student Research -->
+      <div class="p-3 bg-gray-50 border border-gray-200/80 rounded space-y-2.5">
+        <div class="flex flex-col sm:flex-row gap-2">
+          <div class="relative flex-1">
+            <input 
+              type="text" 
+              id="student-search-input" 
+              placeholder="Search by student name, topic keyword (e.g., RAG, Reasoning, KG), or supervisor..." 
+              class="w-full px-3 py-1.5 text-xs border border-gray-300 rounded bg-white focus:outline-none focus:border-sky-600 transition-colors"
+            >
+          </div>
+          <div class="flex gap-2">
+            <select id="degree-filter" class="px-2.5 py-1.5 text-xs border border-gray-300 rounded bg-white focus:outline-none">
+              <option value="all">All Degrees</option>
+              <option value="Ph.D.">Ph.D. Candidates</option>
+              <option value="M.Sc.">M.Sc. Researchers</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Topic Chips -->
+        <div class="flex flex-wrap items-center gap-1.5 text-xs pt-1 border-t border-gray-200/60" id="filter-chips">
+          <span class="text-[11px] text-gray-400 font-semibold mr-1">Keyword:</span>
+          <button data-keyword="" class="topic-chip font-bold text-sky-700 px-2 py-0.5 rounded bg-sky-50 border border-sky-200 cursor-pointer">All</button>
+          <button data-keyword="Reasoning" class="topic-chip text-gray-600 hover:text-sky-700 px-2 py-0.5 rounded bg-white border border-gray-200 cursor-pointer">Reasoning &amp; Optimization</button>
+          <button data-keyword="RAG" class="topic-chip text-gray-600 hover:text-sky-700 px-2 py-0.5 rounded bg-white border border-gray-200 cursor-pointer">RAG &amp; Hallucination</button>
+          <button data-keyword="Knowledge Graph" class="topic-chip text-gray-600 hover:text-sky-700 px-2 py-0.5 rounded bg-white border border-gray-200 cursor-pointer">Knowledge Graphs</button>
+          <button data-keyword="Retrieval" class="topic-chip text-gray-600 hover:text-sky-700 px-2 py-0.5 rounded bg-white border border-gray-200 cursor-pointer">Retrieval &amp; Search</button>
+          <button data-keyword="Vision" class="topic-chip text-gray-600 hover:text-sky-700 px-2 py-0.5 rounded bg-white border border-gray-200 cursor-pointer">Vision &amp; Robotics</button>
+        </div>
+      </div>
+
+      <!-- Active Student Research Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="student-topics-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+    </section>
+
+    <!-- Section 3: Landmark Systems & Benchmarks -->
+    <section id="systems" class="space-y-6 pt-4">
+      <div class="border-b border-gray-200/80 pb-2">
+        <h2 class="text-xl font-bold text-gray-900 flex items-center gap-2">
+          <span>Landmark Systems, Software &amp; Open Benchmarks</span>
+        </h2>
+        <p class="text-xs text-gray-500 mt-0.5">
+          Major production systems, knowledge graphs, open-source repositories, and benchmark datasets published by DML.
+        </p>
+      </div>
+
+      <div class="divide-y divide-gray-100" id="landmark-projects-container">
+        <!-- Injected via JavaScript -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Minimalist Academic Footer -->
+  <footer class="border-t border-gray-200 py-6 mt-16 text-xs text-gray-500">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>&copy; 2026 Data Mining Laboratory (DML) &bull; School of Computer Engineering, IUST.</div>
+      <div class="flex items-center gap-4">
+        <a href="/index.html" class="hover:underline">Home</a>
+        <span>&bull;</span>
+        <a href="/people.html" class="hover:underline">People</a>
+        <span>&bull;</span>
+        <a href="/publications.html" class="hover:underline">Publications</a>
+        <span>&bull;</span>
+        <a href="/seminars.html" class="hover:underline">Seminars</a>
+        <span>&bull;</span>
+        <a href="https://www.linkedin.com/company/iust-data-mining-lab/" target="_blank" rel="noopener noreferrer" class="hover:underline text-[#0a66c2]">DML LinkedIn</a>
+        <span>&bull;</span>
+        <a href="/contact.html" class="hover:underline">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import studentsData from '/src/data/students.json';
+    import projectsData from '/src/data/projects.json';
+
+    // 1. RENDER ACTIVE STUDENT RESEARCH TOPICS
+    const gridContainer = document.getElementById('student-topics-grid');
+    const searchInput = document.getElementById('student-search-input');
+    const degreeSelect = document.getElementById('degree-filter');
+    const chipButtons = document.querySelectorAll('.topic-chip');
+    const countBadge = document.getElementById('topics-count-badge');
+
+    let activeKeyword = '';
+    let searchQuery = '';
+    let degreeFilter = 'all';
+
+    // Filter students to those who are active members
+    const allActive = studentsData.active || [];
+
+    function renderStudents() {
+      const filtered = allActive.filter(s => {
+        // Degree match
+        let matchDegree = true;
+        if (degreeFilter === 'Ph.D.') matchDegree = s.degree.includes('Ph.D.');
+        else if (degreeFilter === 'M.Sc.') matchDegree = s.degree.includes('M.Sc.');
+
+        // Keyword match
+        let matchKeyword = true;
+        if (activeKeyword) {
+          const combined = `${s.topic || ''} ${s.name} ${s.program}`.toLowerCase();
+          matchKeyword = combined.includes(activeKeyword.toLowerCase());
+        }
+
+        // Search text match
+        let matchSearch = true;
+        if (searchQuery.trim() !== '') {
+          const q = searchQuery.toLowerCase();
+          const combined = `${s.name} ${s.topic || ''} ${s.mentor || ''} ${s.degree} ${s.program}`.toLowerCase();
+          matchSearch = combined.includes(q);
+        }
+
+        return matchDegree && matchKeyword && matchSearch;
+      });
+
+      countBadge.textContent = `${filtered.length} Researchers`;
+
+      if (filtered.length === 0) {
+        gridContainer.innerHTML = `
+          <div class="col-span-1 md:col-span-2 py-10 text-center text-xs text-gray-400 italic">
+            No active research topics matched your search filters.
+          </div>
+        `;
+        return;
+      }
+
+      gridContainer.innerHTML = filtered.map(s => {
+        const hasPhoto = s.image && s.image.trim() !== '';
+        const hasTopic = s.topic && s.topic.trim() !== '';
+        const topicText = hasTopic ? s.topic : 'General Research in Natural Language Processing & Data Mining';
+
+        return `
+          <div class="p-4 bg-white border border-gray-200/80 rounded-lg shadow-2xs hover:shadow-xs transition-shadow flex flex-col justify-between space-y-3">
+            <div class="space-y-2">
+              <div class="flex items-start gap-3">
+                ${hasPhoto ? `
+                  <img 
+                    src="${s.image}" 
+                    alt="${s.name}" 
+                    class="w-12 h-14 object-cover object-top rounded border border-gray-200 shrink-0"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                  >
+                  <div class="w-12 h-14 bg-sky-50 text-sky-700 font-bold text-sm rounded border border-sky-100 hidden items-center justify-center shrink-0">
+                    ${s.name.split(' ').map(n=>n[0]).join('')}
+                  </div>
+                ` : `
+                  <div class="w-12 h-14 bg-gray-100 text-gray-500 font-bold text-xs rounded border border-gray-200 flex items-center justify-center shrink-0">
+                    ${s.name.split(' ').map(n=>n[0]).join('')}
+                  </div>
+                `}
+
+                <div class="min-w-0 flex-1">
+                  <h3 class="text-sm font-bold text-gray-900">${s.name}</h3>
+                  <div class="text-[11px] text-gray-500 font-medium">
+                    ${s.degree} &bull; ${s.program}
+                  </div>
+                  ${s.mentor ? `
+                    <div class="text-[10px] text-gray-400 mt-0.5">
+                      Advisor: ${s.mentor}
+                    </div>
+                  ` : ''}
+                </div>
+              </div>
+
+              <!-- Topic Banner -->
+              <div class="pt-1">
+                <div class="text-[10px] font-mono text-gray-400 font-semibold uppercase tracking-wider mb-0.5">Investigation Topic:</div>
+                <div class="text-xs text-gray-800 font-medium leading-snug bg-gray-50/80 p-2.5 rounded border border-gray-200/60 ${hasTopic ? 'text-gray-900' : 'italic text-gray-500'}">
+                  ${topicText}
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer & Links -->
+            <div class="pt-2 border-t border-gray-100 flex items-center justify-between text-xs">
+              <span class="text-[10px] font-mono text-gray-400">
+                ${s.year ? `Class of ${s.year.split(' ')[0]}` : 'Active Researcher'}
+              </span>
+              <div class="flex items-center gap-2">
+                ${s.linkedin ? `
+                  <a 
+                    href="${s.linkedin}" 
+                    target="_blank" 
+                    class="inline-flex items-center gap-1 text-[11px] font-semibold text-[#0a66c2] hover:underline"
+                    title="LinkedIn Profile"
+                  >
+                    <span>LinkedIn</span> &rarr;
+                  </a>
+                ` : ''}
+                <a 
+                  href="/people.html" 
+                  class="text-[11px] text-gray-500 hover:text-sky-700"
+                >
+                  Bio
+                </a>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Filter events
+    searchInput.oninput = (e) => {
+      searchQuery = e.target.value;
+      renderStudents();
+    };
+
+    degreeSelect.onchange = (e) => {
+      degreeFilter = e.target.value;
+      renderStudents();
+    };
+
+    chipButtons.forEach(btn => {
+      btn.onclick = () => {
+        chipButtons.forEach(b => {
+          b.className = 'topic-chip text-gray-600 hover:text-sky-700 px-2 py-0.5 rounded bg-white border border-gray-200 cursor-pointer';
+        });
+        btn.className = 'topic-chip font-bold text-sky-700 px-2 py-0.5 rounded bg-sky-50 border border-sky-200 cursor-pointer';
+        activeKeyword = btn.getAttribute('data-keyword') || '';
+        renderStudents();
+      };
+    });
+
+    renderStudents();
+
+    // 2. RENDER LANDMARK SYSTEMS & DATASETS
+    const projectsContainer = document.getElementById('landmark-projects-container');
+    if (projectsContainer && projectsData) {
+      projectsContainer.innerHTML = projectsData.map(p => `
+        <div class="py-6 space-y-2">
+          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+            <h3 class="text-base font-bold text-gray-900">${p.title}</h3>
+            <span class="text-xs font-mono font-medium text-sky-700 bg-sky-50 px-2 py-0.5 rounded border border-sky-200 self-start sm:self-auto">${p.badge || 'Software & Dataset'}</span>
+          </div>
+          <div class="text-xs text-gray-600 font-medium">Lead Researchers: ${p.lead}</div>
+          <p class="text-xs text-gray-700 leading-relaxed pt-1">${p.description}</p>
+          <div class="pt-2 flex flex-wrap items-center gap-3 text-xs font-medium">
+            ${p.links.paper ? `<a href="${p.links.paper}" target="_blank" class="text-sky-700 hover:underline font-semibold">[Refereed Paper]</a>` : ''}
+            ${p.links.arxiv ? `<a href="${p.links.arxiv}" target="_blank" class="text-sky-700 hover:underline font-semibold">[arXiv: ${p.links.arxiv.split('/').pop()}]</a>` : ''}
+            ${p.links.website ? `<a href="${p.links.website}" target="_blank" class="text-sky-700 hover:underline font-semibold">[Project Website]</a>` : ''}
+            <span class="text-gray-300">|</span>
+            <span class="text-gray-500">${p.tags.join(' &bull; ')}</span>
+          </div>
+        </div>
+      `).join('');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Seminars &amp; Presentation Schedule • Data Mining Laboratory (DML) • IUST</title>
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body class="bg-white text-gray-800 font-sans antialiased min-h-screen flex flex-col">
+
+  <!-- Minimalist Academic Header -->
+  <header class="border-b border-gray-200 py-6">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 mb-4">
+        <div>
+          <a href="/index.html" class="text-2xl font-bold text-gray-900 hover:text-sky-700 transition-colors">
+            Data Mining Laboratory (DML)
+          </a>
+          <div class="text-sm text-gray-500 font-medium mt-0.5">
+            School of Computer Engineering &bull; Iran University of Science and Technology (IUST)
+          </div>
+        </div>
+        <div class="flex items-center gap-3 text-xs font-mono">
+          <a href="https://www.linkedin.com/company/iust-data-mining-lab/" target="_blank" rel="noopener noreferrer" class="text-[#0a66c2] hover:underline font-semibold flex items-center gap-1">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.6a1.67 1.67 0 1 0 0 3.34 1.67 1.67 0 0 0 0-3.34z"/></svg>
+            <span>DML LinkedIn</span>
+          </a>
+          <span class="text-gray-300">|</span>
+          <span class="text-gray-400">dml.iust.ac.ir</span>
+        </div>
+      </div>
+
+      <nav class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium border-t border-gray-100 pt-3">
+        <a href="/index.html" class="text-gray-600 hover:text-sky-700">Home</a>
+        <a href="/research.html" class="text-gray-600 hover:text-sky-700">Research &amp; Projects</a>
+        <a href="/people.html" class="text-gray-600 hover:text-sky-700">People</a>
+        <a href="/publications.html" class="text-gray-600 hover:text-sky-700">Publications</a>
+        <a href="/seminars.html" class="text-sky-700 font-bold">Seminars</a>
+        <a href="/join.html" class="text-gray-600 hover:text-sky-700">Join Us</a>
+        <a href="/contact.html" class="text-gray-600 hover:text-sky-700">Contact</a>
+        <span class="text-gray-300">|</span>
+        <a href="http://minaei.iust.ac.ir/" target="_blank" class="text-gray-500 hover:text-gray-800 text-xs">Prof. Minaei Page &rarr;</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 max-w-5xl mx-auto px-4 sm:px-6 py-10 w-full space-y-10">
+    
+    <!-- Page Header -->
+    <div class="space-y-3 border-b border-gray-100 pb-4">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+        <h1 class="text-2xl font-bold text-gray-900">Lab Seminars &amp; Presentation Schedule</h1>
+        <a 
+          href="https://www.linkedin.com/company/iust-data-mining-lab/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="text-xs font-semibold text-[#0a66c2] hover:underline flex items-center gap-1 shrink-0"
+        >
+          <span>Follow announcements on LinkedIn</span> &rarr;
+        </a>
+      </div>
+      <p class="text-sm text-gray-600 leading-relaxed max-w-3xl">
+        The Data Mining Laboratory hosts regular bi-weekly academic seminars, progress colloquia, and graduate thesis defense sessions. Presentations cover recent literature surveys, benchmark evaluations, and empirical findings by DML doctoral and master’s researchers.
+      </p>
+
+      <!-- View Selector Tabs -->
+      <div class="flex flex-wrap gap-2 pt-2" id="view-tabs">
+        <button 
+          id="tab-btn-general" 
+          class="px-3.5 py-1.5 text-xs font-bold rounded bg-sky-700 text-white shadow-2xs cursor-pointer transition-colors"
+        >
+          General Research Colloquia (1404–1405 Series)
+        </button>
+        <button 
+          id="tab-btn-cohort" 
+          class="px-3.5 py-1.5 text-xs font-medium rounded bg-gray-100 text-gray-700 hover:bg-gray-200 border border-gray-200/80 cursor-pointer transition-colors"
+        >
+          M.Sc. Seminar Milestones (Class of 1404)
+        </button>
+      </div>
+    </div>
+
+    <!-- VIEW 1: GENERAL RESEARCH COLLOQUIA -->
+    <section id="view-general" class="space-y-6">
+      
+      <!-- Filter & Search Controls -->
+      <div class="p-3.5 bg-gray-50 border border-gray-200/80 rounded space-y-3">
+        <div class="flex flex-col sm:flex-row gap-2.5">
+          <div class="relative flex-1">
+            <input 
+              type="text" 
+              id="colloquium-search" 
+              placeholder="Search by presenter name, topic keyword, advisor, or session date..." 
+              class="w-full px-3 py-1.5 text-xs border border-gray-300 rounded bg-white focus:outline-none focus:border-sky-600 transition-colors"
+            >
+          </div>
+          <div class="flex gap-2 shrink-0">
+            <select id="status-filter" class="px-2.5 py-1.5 text-xs border border-gray-300 rounded bg-white focus:outline-none">
+              <option value="all">All Sessions</option>
+              <option value="Completed">Completed Talks</option>
+              <option value="Scheduled">Scheduled / Upcoming</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-2 text-xs text-gray-500 pt-0.5 border-t border-gray-200/50">
+          <div class="flex items-center gap-2">
+            <span id="colloquia-count" class="font-medium text-gray-700"></span>
+            <span class="text-gray-300">&bull;</span>
+            <span class="text-[11px] text-gray-500">Internal Laboratory Colloquia (1404–1405 Series)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Colloquia Table -->
+      <div class="overflow-x-auto border border-gray-200 rounded-lg shadow-2xs">
+        <table class="min-w-full divide-y divide-gray-200 text-xs text-left">
+          <thead class="bg-gray-50 font-semibold text-gray-700">
+            <tr>
+              <th scope="col" class="px-3.5 py-3 w-36">Date</th>
+              <th scope="col" class="px-4 py-3 w-48">Presenter &amp; Mentor</th>
+              <th scope="col" class="px-4 py-3">Topic Title</th>
+              <th scope="col" class="px-3.5 py-3 w-28 text-center">Status</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100 bg-white" id="colloquia-tbody">
+            <!-- Injected via JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- VIEW 2: M.SC. SEMINAR MILESTONES (CLASS OF 1404) -->
+    <section id="view-cohort" class="space-y-8 hidden">
+      
+      <!-- Bi-Weekly 2-Track Presentations -->
+      <div class="space-y-3">
+        <div class="border-b border-gray-200/80 pb-2">
+          <h2 class="text-lg font-bold text-gray-900">Bi-Weekly 2-Track Research Presentations</h2>
+          <p class="text-xs text-gray-500 mt-0.5">Entering Class of 1404 (2025–2026 Academic Year)</p>
+        </div>
+
+        <div class="overflow-x-auto border border-gray-200 rounded-lg shadow-2xs">
+          <table class="min-w-full divide-y divide-gray-200 text-xs text-left">
+            <thead class="bg-gray-50 font-semibold text-gray-700">
+              <tr>
+                <th scope="col" class="px-3.5 py-3 w-36">Session &bull; Date</th>
+                <th scope="col" class="px-4 py-3">Track 1 &bull; Speaker &amp; Topic</th>
+                <th scope="col" class="px-4 py-3">Track 2 &bull; Speaker &amp; Topic</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100 bg-white" id="cohort-tbody">
+              <!-- Injected via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- LinkedIn Callout Banner -->
+    <div class="bg-sky-50/70 border border-sky-200/80 rounded-lg p-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-sky-900">
+      <div class="space-y-0.5 text-center sm:text-left">
+        <span class="font-bold">Follow the Data Mining Laboratory on LinkedIn</span>
+        <p class="text-[11px] text-sky-800">
+          Get notifications regarding upcoming lab colloquia, visitor lectures, open code releases, and publication alerts.
+        </p>
+      </div>
+      <a 
+        href="https://www.linkedin.com/company/iust-data-mining-lab/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="shrink-0 px-3.5 py-1.5 bg-[#0a66c2] hover:bg-[#004182] text-white font-semibold rounded shadow-2xs transition-colors flex items-center gap-1.5"
+      >
+        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.6a1.67 1.67 0 1 0 0 3.34 1.67 1.67 0 0 0 0-3.34z"/></svg>
+        <span>Connect on LinkedIn</span> &rarr;
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Minimalist Academic Footer -->
+  <footer class="border-t border-gray-200 py-6 mt-16 text-xs text-gray-500">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>&copy; 2026 Data Mining Laboratory (DML) &bull; School of Computer Engineering, IUST.</div>
+      <div class="flex items-center gap-4">
+        <a href="/index.html" class="hover:underline">Home</a>
+        <span>&bull;</span>
+        <a href="/research.html" class="hover:underline">Research &amp; Projects</a>
+        <span>&bull;</span>
+        <a href="/people.html" class="hover:underline">People</a>
+        <span>&bull;</span>
+        <a href="/publications.html" class="hover:underline">Publications</a>
+        <span>&bull;</span>
+        <a href="https://www.linkedin.com/company/iust-data-mining-lab/" target="_blank" rel="noopener noreferrer" class="hover:underline text-[#0a66c2]">DML LinkedIn</a>
+        <span>&bull;</span>
+        <a href="/contact.html" class="hover:underline">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import seminarsData from '/src/data/seminars.json';
+
+    // TAB SWITCHING
+    const btnGeneral = document.getElementById('tab-btn-general');
+    const btnCohort = document.getElementById('tab-btn-cohort');
+    const viewGeneral = document.getElementById('view-general');
+    const viewCohort = document.getElementById('view-cohort');
+
+    btnGeneral.onclick = () => {
+      btnGeneral.className = 'px-3.5 py-1.5 text-xs font-bold rounded bg-sky-700 text-white shadow-2xs cursor-pointer transition-colors';
+      btnCohort.className = 'px-3.5 py-1.5 text-xs font-medium rounded bg-gray-100 text-gray-700 hover:bg-gray-200 border border-gray-200/80 cursor-pointer transition-colors';
+      viewGeneral.classList.remove('hidden');
+      viewCohort.classList.add('hidden');
+    };
+
+    btnCohort.onclick = () => {
+      btnCohort.className = 'px-3.5 py-1.5 text-xs font-bold rounded bg-sky-700 text-white shadow-2xs cursor-pointer transition-colors';
+      btnGeneral.className = 'px-3.5 py-1.5 text-xs font-medium rounded bg-gray-100 text-gray-700 hover:bg-gray-200 border border-gray-200/80 cursor-pointer transition-colors';
+      viewCohort.classList.remove('hidden');
+      viewGeneral.classList.add('hidden');
+    };
+
+    // RENDER VIEW 1: GENERAL COLLOQUIA
+    const searchInput = document.getElementById('colloquium-search');
+    const statusSelect = document.getElementById('status-filter');
+    const countSpan = document.getElementById('colloquia-count');
+    const colloquiaTbody = document.getElementById('colloquia-tbody');
+
+    const generalList = seminarsData.series_general || [];
+    let query = '';
+    let statusFilter = 'all';
+
+    function renderColloquia() {
+      const filtered = generalList.filter(item => {
+        let matchStatus = true;
+        if (statusFilter !== 'all') {
+          matchStatus = item.status === statusFilter;
+        }
+
+        let matchQuery = true;
+        if (query.trim() !== '') {
+          const q = query.toLowerCase();
+          const combined = `${item.speaker} ${item.title} ${item.mentor} ${item.date} ${item.status}`.toLowerCase();
+          matchQuery = combined.includes(q);
+        }
+
+        return matchStatus && matchQuery;
+      });
+
+      countSpan.textContent = `Showing ${filtered.length} of ${generalList.length} presentations`;
+
+      if (filtered.length === 0) {
+        colloquiaTbody.innerHTML = `
+          <tr>
+            <td colspan="4" class="px-4 py-8 text-center text-xs text-gray-400 italic">
+              No colloquia matched your search filters.
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      colloquiaTbody.innerHTML = filtered.map(item => {
+        const isCompleted = item.status === 'Completed';
+
+        return `
+          <tr class="hover:bg-gray-50/80 transition-colors">
+            <td class="px-3.5 py-3 font-mono text-[11px] text-gray-600 align-top whitespace-nowrap">
+              ${item.date}
+            </td>
+
+            <td class="px-4 py-3 align-top">
+              <div class="font-bold text-gray-900">${item.speaker}</div>
+              <div class="text-[11px] text-gray-500 mt-0.5">
+                ${item.mentor || 'Prof. Behrouz Minaei-Bidgoli'}
+              </div>
+            </td>
+
+            <td class="px-4 py-3 align-top">
+              <div class="font-medium text-gray-800 leading-snug text-xs">
+                &ldquo;${item.title}&rdquo;
+              </div>
+            </td>
+
+            <td class="px-3.5 py-3 align-top text-center">
+              ${isCompleted ? `
+                <span class="inline-block text-[10px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                  Completed
+                </span>
+              ` : `
+                <span class="inline-block text-[10px] font-semibold text-sky-800 bg-sky-50 px-2 py-0.5 rounded border border-sky-200">
+                  Scheduled
+                </span>
+              `}
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    searchInput.oninput = (e) => {
+      query = e.target.value;
+      renderColloquia();
+    };
+
+    statusSelect.onchange = (e) => {
+      statusFilter = e.target.value;
+      renderColloquia();
+    };
+
+    renderColloquia();
+
+    // RENDER VIEW 2: COHORT SESSIONS & DEADLINES
+    const cohortTbody = document.getElementById('cohort-tbody');
+    const cohortList = seminarsData.series_class_1404 || [];
+
+    if (cohortTbody && cohortList.length > 0) {
+      cohortTbody.innerHTML = cohortList.map(sem => {
+        const isCompleted = sem.status === 'Completed';
+
+        return `
+          <tr class="hover:bg-gray-50/80 transition-colors">
+            <td class="px-3.5 py-3 font-mono text-[11px] text-gray-600 align-top whitespace-nowrap">
+              <div class="flex items-center gap-1.5">
+                <span class="font-bold text-gray-900">Session ${sem.session}</span>
+                ${isCompleted ? `
+                  <span class="text-[9px] font-semibold text-emerald-800 bg-emerald-50 px-1.5 py-0.2 rounded border border-emerald-200">
+                    Completed
+                  </span>
+                ` : `
+                  <span class="text-[9px] font-semibold text-sky-800 bg-sky-50 px-1.5 py-0.2 rounded border border-sky-200">
+                    Scheduled
+                  </span>
+                `}
+              </div>
+              <span class="text-gray-400 text-[11px] mt-0.5 block">${sem.date}</span>
+            </td>
+
+            <td class="px-4 py-3 align-top">
+              <div class="font-semibold text-gray-900">${sem.speaker1}</div>
+              ${sem.topic1 ? `<div class="text-gray-600 text-[11px] mt-0.5 leading-snug">&ldquo;${sem.topic1}&rdquo;</div>` : ''}
+            </td>
+
+            <td class="px-4 py-3 align-top">
+              ${sem.speaker2 ? `
+                <div class="font-semibold text-gray-900">${sem.speaker2}</div>
+                ${sem.topic2 ? `<div class="text-gray-600 text-[11px] mt-0.5 leading-snug">&ldquo;${sem.topic2}&rdquo;</div>` : ''}
+              ` : '<span class="text-gray-300 italic text-[11px]">Open Presentation Slot</span>'}
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+  </script>
+</body>
+</html>

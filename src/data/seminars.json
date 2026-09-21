@@ -1,0 +1,308 @@
+{
+  "series_general": [
+    {
+      "id": "gen-01",
+      "speaker": "Alireza Nazari",
+      "mentor": "Prof. Behrouz Minaei-Bidgoli",
+      "title": "sEMG for Tele-Robotics and Robot Control",
+      "date": "1404/07/27 (Oct 19, 2025)",
+      "status": "Completed"
+    },
+    {
+      "id": "gen-02",
+      "speaker": "Poorya Sanei",
+      "mentor": "Parham Rahimi & Prof. Minaei",
+      "title": "Review of Preference Optimization Methods for Aligning Large Language Models",
+      "date": "1404/08/04 (Oct 26, 2025)",
+      "status": "Completed"
+    },
+    {
+      "id": "gen-03",
+      "speaker": "Mohammadamin Haeri",
+      "mentor": "Prof. Behrouz Minaei-Bidgoli",
+      "title": "Improving Retrieval Performance in Retrieval-Augmented Generation (RAG)",
+      "date": "1404/08/18 (Nov 09, 2025)",
+      "status": "Completed"
+    },
+    {
+      "id": "gen-04",
+      "speaker": "Amirhossein Amin-Moghadam",
+      "mentor": "Dr. Ashtiani & Prof. Minaei",
+      "title": "Federated Learning of Large Language Models",
+      "date": "1404/09/09 (Nov 30, 2025)",
+      "status": "Completed"
+    },
+    {
+      "id": "gen-05",
+      "speaker": "Aida Khaleghi",
+      "mentor": "Dr. Amoozegar & Prof. Minaei",
+      "title": "Investigation of Soft-Prompt Tuning Techniques in Large Language Models",
+      "date": "1404/09/16 (Dec 07, 2025)",
+      "status": "Completed"
+    },
+    {
+      "id": "gen-06",
+      "speaker": "Mehdi Aghababaei",
+      "mentor": "Dr. Mirarab & Prof. Minaei",
+      "title": "Knowledge Graph Reasoning: Path Finding",
+      "date": "1404/10/07 (Dec 28, 2025)",
+      "status": "Completed"
+    },
+    {
+      "id": "gen-07",
+      "speaker": "Peyman Attarsayah",
+      "mentor": "Dr. Majid Asgari & Prof. Minaei",
+      "title": "Entity Linking Improvement Based on the Retriever-Reader Paradigm",
+      "date": "1404/12/03 (Feb 22, 2026)",
+      "status": "Completed"
+    },
+    {
+      "id": "gen-08",
+      "speaker": "Reza Alidoust",
+      "mentor": "Prof. Behrouz Minaei-Bidgoli",
+      "title": "Knowledge Graph Completion via Permutation Contrastive Learning with Multi-Modal Embeddings",
+      "date": "1405/03/17 (Jun 06, 2026)",
+      "status": "Completed"
+    },
+    {
+      "id": "gen-09",
+      "speaker": "Negin Karimi",
+      "mentor": "Dr. Ghafoori & Prof. Minaei",
+      "title": "A Hybrid Method Based on Graph Neural Networks and LLMs for Multi-Hop QA Accuracy Improvement",
+      "date": "1405/03/31 (Jun 20, 2026)",
+      "status": "Completed"
+    },
+    {
+      "id": "gen-10",
+      "speaker": "Fatemeh Sotoudeh",
+      "mentor": "Dr. Khademi & Prof. Minaei",
+      "title": "Improving Document Retrieval Based on Query-Document Matching using Keyphrases and Embeddings",
+      "date": "1405/04/07 (Jun 27, 2026)",
+      "status": "Completed"
+    },
+    {
+      "id": "gen-11",
+      "speaker": "Zahra Amiri",
+      "mentor": "Dr. Khademi & Prof. Minaei",
+      "title": "Unsupervised Entity Alignment in Knowledge Graphs",
+      "date": "1405/04/21 (Jul 11, 2026)",
+      "status": "Completed"
+    },
+    {
+      "id": "gen-12",
+      "speaker": "Arefeh Rajabian",
+      "mentor": "Dr. Zohreh Motashaker & Prof. Minaei",
+      "title": "Improving Reasoning in Large Language Models Using Prompt Engineering or Model Tuning Methods",
+      "date": "1405/05/04 (Jul 25, 2026)",
+      "status": "Completed"
+    },
+    {
+      "id": "gen-13",
+      "speaker": "Somayyeh Rezaei",
+      "mentor": "Dr. Amoozegar & Prof. Minaei",
+      "title": "Smart Meter Anomaly Detection using Self-Supervised and Transformer Models",
+      "date": "1405/05/18 (Aug 08, 2026)",
+      "status": "Completed"
+    },
+    {
+      "id": "gen-14",
+      "speaker": "Amirhossein Amin-Moghadam",
+      "mentor": "Dr. Ashtiani & Prof. Minaei",
+      "title": "Improving NPC's Behavior with Edge Computing",
+      "date": "1405/06/01 (Aug 22, 2026)",
+      "status": "Completed"
+    },
+    {
+      "id": "gen-15",
+      "speaker": "Aida Khaleghi",
+      "mentor": "Dr. Amoozegar & Prof. Minaei",
+      "title": "Medical Image Anomaly Detection via Deep Unrolled Algorithms",
+      "date": "1405/06/15 (Sep 05, 2026)",
+      "status": "Completed"
+    },
+    {
+      "id": "gen-16",
+      "speaker": "Mehdi Aghababaei",
+      "mentor": "Dr. Mirarab & Prof. Minaei",
+      "title": "Analysis and Mitigation of Path Hallucination in Multi-Hop Reasoning of Knowledge Graph-Augmented LLMs",
+      "date": "1405/06/22 (Sep 12, 2026)",
+      "status": "Completed"
+    },
+    {
+      "id": "gen-17",
+      "speaker": "Nazanin Ahmadpour",
+      "mentor": "Dr. Khademi & Prof. Minaei",
+      "title": "Semantic-Preserving Knowledge Graph Compression",
+      "date": "1405/06/29 (Sep 19, 2026)",
+      "status": "Scheduled"
+    },
+    {
+      "id": "gen-18",
+      "speaker": "Alireza Nazari",
+      "mentor": "Prof. Behrouz Minaei-Bidgoli",
+      "title": "Vision-Language Models in Task Planning for Robotics",
+      "date": "1405/07/05 (Sep 26, 2026)",
+      "status": "Scheduled"
+    },
+    {
+      "id": "gen-19",
+      "speaker": "Poorya Sanei",
+      "mentor": "Parham Rahimi & Prof. Minaei",
+      "title": "Reasoning-Aware Preference Optimization in Large Language Models",
+      "date": "1405/07/12 (Oct 03, 2026)",
+      "status": "Scheduled"
+    },
+    {
+      "id": "gen-20",
+      "speaker": "Mohammadamin Haeri",
+      "mentor": "Prof. Behrouz Minaei-Bidgoli",
+      "title": "Advanced Retrieval Strategies for Large-Scale RAG",
+      "date": "1405/07/19 (Oct 10, 2026)",
+      "status": "Scheduled"
+    },
+    {
+      "id": "gen-21",
+      "speaker": "Ali Aghaei",
+      "mentor": "Dr. Majid Asgari & Prof. Minaei",
+      "title": "Inference Paradigms in Multimodal Reasoning",
+      "date": "1405/07/26 (Oct 17, 2026)",
+      "status": "Scheduled"
+    },
+    {
+      "id": "gen-22",
+      "speaker": "Pouya Kavosh",
+      "mentor": "Dr. Majid Asgari & Prof. Minaei",
+      "title": "Enhancing Reliability in Multimodal AI Software Systems via Chain-of-Thought Reasoning",
+      "date": "1405/07/03 (Sep 24, 2026)",
+      "status": "Scheduled"
+    },
+    {
+      "id": "gen-23",
+      "speaker": "Mohammad Hossein Karimi",
+      "mentor": "Dr. Majid Asgari & Prof. Minaei",
+      "title": "Small Language Models for Intelligent Information Retrieval in Visually-Rich Documents (VRD)",
+      "date": "1405/07/10 (Oct 01, 2026)",
+      "status": "Scheduled"
+    },
+    {
+      "id": "gen-24",
+      "speaker": "Mohammad Bakhtiari",
+      "mentor": "Dr. Majid Asgari & Prof. Minaei",
+      "title": "Cost-Effective and Simplified Graph Construction in GraphRAG Systems",
+      "date": "1405/07/17 (Oct 08, 2026)",
+      "status": "Scheduled"
+    },
+    {
+      "id": "gen-25",
+      "speaker": "Amirhossein Karami",
+      "mentor": "Dr. Majid Asgari & Prof. Minaei",
+      "title": "World Models in Multimodal AI: Reasoning and Planning in Latent Space",
+      "date": "1405/07/24 (Oct 15, 2026)",
+      "status": "Scheduled"
+    },
+    {
+      "id": "gen-26",
+      "speaker": "Mohadeseh Emadi",
+      "mentor": "Dr. Majid Asgari, Dr. Shahbazi & Prof. Minaei",
+      "title": "Performance Enhancement of Knowledge Graph-Augmented RAG using Reinforcement Learning",
+      "date": "1405/08/01 (Oct 22, 2026)",
+      "status": "Scheduled"
+    },
+    {
+      "id": "gen-27",
+      "speaker": "Kian Omoomi",
+      "mentor": "Dr. Majid Asgari & Prof. Minaei",
+      "title": "User Representation Methods in Personalized Text Classification",
+      "date": "1405/08/08 (Oct 29, 2026)",
+      "status": "Scheduled"
+    },
+    {
+      "id": "gen-28",
+      "speaker": "Alireza Mohammadi",
+      "mentor": "Dr. Majid Asgari & Prof. Minaei",
+      "title": "Uncertainty-Aware Retrieval-Augmented Generation",
+      "date": "1405/08/15 (Nov 05, 2026)",
+      "status": "Scheduled"
+    },
+    {
+      "id": "gen-29",
+      "speaker": "Fatemeh Yousefi",
+      "mentor": "Dr. Majid Asgari & Prof. Minaei",
+      "title": "Multimodal Graph Retrieval-Augmented Generation: Architectures and Applications",
+      "date": "1405/08/22 (Nov 12, 2026)",
+      "status": "Scheduled"
+    },
+    {
+      "id": "gen-30",
+      "speaker": "Maryam Mortazavi Nik",
+      "mentor": "Dr. Majid Asgari & Prof. Minaei",
+      "title": "Consistency Checking in Semantic Web via Hybrid Solvers and Graph LLMs",
+      "date": "Scheduled",
+      "status": "Scheduled"
+    },
+    {
+      "id": "gen-31",
+      "speaker": "Amirhossein Bagheri",
+      "mentor": "Dr. Majid Asgari & Prof. Minaei",
+      "title": "Late-Interaction Multimodal Document Retrieval Systems",
+      "date": "Scheduled",
+      "status": "Scheduled"
+    }
+  ],
+  "series_class_1404": [
+    {
+      "session": 1,
+      "date": "1405/06/04 (Aug 25, 2026)",
+      "status": "Completed",
+      "speaker1": "Maryam Mortazavi Nik",
+      "topic1": "Hybrid Approach Based on Traditional Solvers and Graph-Based LLMs for Consistency Checking and Validation in Semantic Web",
+      "speaker2": "Mohadeseh Emadi",
+      "topic2": "Enhancing Knowledge Graph-Augmented RAG Systems via Reinforcement Learning"
+    },
+    {
+      "session": 2,
+      "date": "1405/06/11 (Sep 01, 2026)",
+      "status": "Completed",
+      "speaker1": "Amirhossein Bagheri",
+      "topic1": "Investigation of Multimodal Document Retrieval Methods Based on Late-Interaction Models",
+      "speaker2": "",
+      "topic2": ""
+    },
+    {
+      "session": 3,
+      "date": "1405/07/08 (Sep 29, 2026)",
+      "status": "Scheduled",
+      "speaker1": "Amirhossein Karami",
+      "topic1": "World Models in Multimodal AI: Survey of Reasoning and Planning in Latent Space",
+      "speaker2": "Mohammad Hossein Karimi",
+      "topic2": "Application of Small Language Models in Intelligent Information Retrieval for Visually-Rich Documents (VRD)"
+    },
+    {
+      "session": 4,
+      "date": "1405/07/22 (Oct 13, 2026)",
+      "status": "Scheduled",
+      "speaker1": "Fatemeh Yousefi",
+      "topic1": "Multimodal Graph-Augmented Retrieval Generation Systems: Architectures, Challenges, and Applications",
+      "speaker2": "Ali Aghaei",
+      "topic2": "Inference Paradigms in Multimodal Reasoning"
+    },
+    {
+      "session": 5,
+      "date": "1405/08/06 (Oct 27, 2026)",
+      "status": "Scheduled",
+      "speaker1": "Alireza Mohammadi",
+      "topic1": "Uncertainty-Aware Retrieval-Augmented Generation",
+      "speaker2": "Pouya Kavosh",
+      "topic2": "Enhancing Reliability in Multimodal AI Systems through Chain-of-Thought Reasoning Architecture"
+    },
+    {
+      "session": 6,
+      "date": "1405/08/13 (Nov 03, 2026)",
+      "status": "Scheduled",
+      "speaker1": "Mohammad Bakhtiari",
+      "topic1": "Systematic Review of Cost-Effective and Simplified Graph Construction Methods in GraphRAG Systems",
+      "speaker2": "Kian Omoomi",
+      "topic2": "Investigation of User Representation Methods in Personalized Text Classification"
+    }
+  ]
+}

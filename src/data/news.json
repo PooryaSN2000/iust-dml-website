@@ -1,0 +1,37 @@
+[
+  {
+    "date": "2026-02-15",
+    "title": "Two New Papers on Arabic Morphological Analysis Published",
+    "summary": "Our latest benchmarks on domain sensitivity in Arabic morphological analyzers and the NoorGhateh corpus have been published in the Journal of Open Humanities Data.",
+    "category": "Publication",
+    "link": "https://openhumanitiesdata.metajnl.com/"
+  },
+  {
+    "date": "2026-01-10",
+    "title": "New Paper on Knowledge Graph Link Prediction in ESWA",
+    "summary": "Najmeh Torabian et al. proposed an unsupervised candidate re-ranking method with BGE sentence embeddings for knowledge graph link prediction, accepted in Expert Systems with Applications.",
+    "category": "Publication",
+    "link": "https://doi.org/10.1016/j.eswa.2025.132362"
+  },
+  {
+    "date": "2025-11-20",
+    "title": "PersianMHQA Published in ACM TALIP",
+    "summary": "Our paper introducing PersianMHQA, the first large-scale multi-hop open domain Persian QA dataset, has been published in ACM Transactions on Asian and Low-Resource Language Information Processing.",
+    "category": "Milestone",
+    "link": "https://dl.acm.org/journal/tallip"
+  },
+  {
+    "date": "2025-10-28",
+    "title": "FAIR-RAG & FARSIQA Frameworks Announced",
+    "summary": "Mohammad Aghajani Asl and Prof. Minaei introduced FAIR-RAG, an iterative adaptive refinement framework that guarantees faithfulness and removes hallucinations in retrieval-augmented generation.",
+    "category": "Release",
+    "link": "https://arxiv.org/abs/2510.22344"
+  },
+  {
+    "date": "2025-10-12",
+    "title": "Rezwan: 1.2M Record Corpus for Hadith NLP Released",
+    "summary": "Rezwan, our LLM-powered corpus for classical texts with entity links and chain-of-narration annotations, has been released to the research community.",
+    "category": "Dataset",
+    "link": "https://arxiv.org/abs/2510.03781"
+  }
+]

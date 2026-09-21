@@ -1,0 +1,17 @@
+{
+  "name": "dml-lab-website",
+  "version": "1.0.0",
+  "description": "Data Mining Laboratory (DML) - School of Computer Engineering, IUST",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "sync:scholar": "python3 scripts/sync_scholar.py"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.0"
+  }
+}

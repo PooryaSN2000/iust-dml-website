@@ -1,0 +1,93 @@
+[
+  {
+    "id": "farsbase",
+    "title": "FarsBase: The First Persian Knowledge Graph",
+    "lead": "Majid Asgari-Bidhendi, Ali Hadian, Prof. Behrouz Minaei-Bidgoli",
+    "tags": ["Knowledge Graphs", "Semantic Web", "Information Extraction"],
+    "description": "FarsBase is the pioneering multi-source, cross-domain Persian knowledge base containing over 100M RDF triples. It extracts facts from Persian Wikipedia and web sources, providing entity linking and SPARQL endpoints used in domestic search engines.",
+    "links": {
+      "paper": "https://www.semantic-web-journal.net/content/farsbase-persian-knowledge-graph-0",
+      "website": "http://farsbase.net"
+    },
+    "badge": "Flagship Project"
+  },
+  {
+    "id": "fair-rag",
+    "title": "FAIR-RAG & FARSIQA",
+    "lead": "Mohammad Aghajani Asl, Majid Asgari-Bidhendi, Prof. Behrouz Minaei-Bidgoli",
+    "tags": ["LLMs & RAG", "Hallucination Mitigation", "Faithful QA"],
+    "description": "Faithful Adaptive Iterative Refinement for Retrieval-Augmented Generation. Developed to enforce rigorous source fidelity and citation provenance in complex, specialized QA domains, eliminating hallucination via multi-stage verification.",
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2510.22344"
+    },
+    "badge": "Recent 2025"
+  },
+  {
+    "id": "persianmhqa",
+    "title": "PersianMHQA & Bactrainus",
+    "lead": "Mobina Taji, Iman Barati, Arash Ghafouri, Prof. Behrouz Minaei-Bidgoli",
+    "tags": ["Multi-hop Reasoning", "LLM Optimization", "Benchmark"],
+    "description": "The first comprehensive open-domain Persian multi-hop question answering benchmark with explicit reasoning paths, paired with Bactrainus: an optimized parameter-efficient LLM framework for compositional question answering.",
+    "links": {
+      "paper": "https://dl.acm.org/journal/tallip",
+      "arxiv": "https://arxiv.org/abs/2501.06286"
+    },
+    "badge": "ACM TALIP"
+  },
+  {
+    "id": "rezwan-hadith",
+    "title": "Rezwan: 1.2M Corpus & LLM Pipeline for Classical Arabic/Persian",
+    "lead": "Majid Asgari-Bidhendi, M. Amin Ghaseminia, Alireza Shahbazi, Prof. Behrouz Minaei-Bidgoli",
+    "tags": ["Digital Humanities", "Classical NLP", "Large Corpus"],
+    "description": "An ambitious computational linguistics and digital humanities initiative curating a 1.2M narrative corpus with chain-of-narration extraction, entity recognition, and semantic validation through tailored large language models.",
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2510.03781"
+    },
+    "badge": "Digital Humanities"
+  },
+  {
+    "id": "persian-nlp-benchmarks",
+    "title": "Persian NLP Benchmark Suite (Pars-ABSA, Pars-OFF, ParsFEVER)",
+    "lead": "Kamyar Darvishi, Taha Shangipour, Majid Zarharan, Prof. Behrouz Minaei-Bidgoli",
+    "tags": ["NLP Benchmarks", "Sentiment Analysis", "Fact Verification"],
+    "description": "A foundational suite of high-quality annotated corpora for low-resource Persian language processing, spanning aspect-based sentiment analysis, offensive language detection, and automated claim verification.",
+    "links": {
+      "paper": "https://aclanthology.org/2022.lrec-1.764/"
+    },
+    "badge": "Open Science"
+  },
+  {
+    "id": "borhan-reasoning",
+    "title": "Borhan: Non-Monotonic Default Logic Engine",
+    "lead": "Alireza Shahbazi, Mohammad Hossein Khojasteh, Prof. Behrouz Minaei-Bidgoli",
+    "tags": ["Symbolic AI", "Knowledge Representation", "Automated Reasoning"],
+    "description": "A high-performance automated reasoner designed for prioritized default logic, enabling neural-symbolic systems to handle exceptions, conflicting rules, and hierarchical legal/domain norms.",
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2310.18224"
+    },
+    "badge": "Neuro-Symbolic"
+  },
+  {
+    "id": "ball-star-tree",
+    "title": "Ball*-tree & ROLL: Large-Scale Scale-Free Graph Synthesis",
+    "lead": "Ali Hadian, Prof. Behrouz Minaei-Bidgoli",
+    "tags": ["Graph Mining", "Scale-Free Networks", "Big Data"],
+    "description": "High-throughput algorithms and in-memory synthesis structures (Ball*-tree and ROLL) for massive scale-free network generation and graph analytics, published in ACM SIGMOD and IEEE TKDE.",
+    "links": {
+      "paper": "https://dl.acm.org/doi/10.1145/2882903.2915234"
+    },
+    "badge": "ACM SIGMOD"
+  },
+  {
+    "id": "virastyar",
+    "title": "Virastyar: Persian Spell-Checker & Text Processing Engine",
+    "lead": "DML Natural Language Processing Research Team",
+    "tags": ["Persian NLP", "Spell Checking", "Linguistic Software"],
+    "description": "One of the earliest comprehensive open-source Persian spell-checking and morphological correction engines, integrating dictionary lookup, heuristic n-gram correction, and half-space standardization used across academic and enterprise software.",
+    "links": {
+      "website": "https://github.com/virastyar"
+    },
+    "badge": "Historical Software"
+  }
+]
+
