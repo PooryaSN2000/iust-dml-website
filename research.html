@@ -176,8 +176,8 @@
         </div>
       </div>
 
-      <!-- Active Student Research Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="student-topics-grid">
+      <!-- Active Student Research Topics List -->
+      <div class="divide-y divide-gray-100 border border-gray-200/80 rounded-lg bg-white overflow-hidden shadow-2xs" id="student-topics-list">
         <!-- Injected via JavaScript -->
       </div>
     </section>
@@ -222,7 +222,7 @@
     import projectsData from '/src/data/projects.json';
 
     // 1. RENDER ACTIVE STUDENT RESEARCH TOPICS
-    const gridContainer = document.getElementById('student-topics-grid');
+    const listContainer = document.getElementById('student-topics-list');
     const searchInput = document.getElementById('student-search-input');
     const degreeSelect = document.getElementById('degree-filter');
     const chipButtons = document.querySelectorAll('.topic-chip');
@@ -232,20 +232,20 @@
     let searchQuery = '';
     let degreeFilter = 'all';
 
-    // Filter students to those who are active members
-    const allActive = studentsData.active || [];
+    // Only include active researchers with defined research topics
+    const allActiveWithTopics = (studentsData.active || []).filter(s => s.topic && s.topic.trim() !== '');
 
     function renderStudents() {
-      const filtered = allActive.filter(s => {
+      const filtered = allActiveWithTopics.filter(s => {
         // Degree match
         let matchDegree = true;
-        if (degreeFilter === 'Ph.D.') matchDegree = s.degree.includes('Ph.D.');
-        else if (degreeFilter === 'M.Sc.') matchDegree = s.degree.includes('M.Sc.');
+        if (degreeFilter === 'Ph.D.') matchDegree = s.degree && s.degree.includes('Ph.D.');
+        else if (degreeFilter === 'M.Sc.') matchDegree = s.degree && s.degree.includes('M.Sc.');
 
         // Keyword match
         let matchKeyword = true;
         if (activeKeyword) {
-          const combined = `${s.topic || ''} ${s.name} ${s.program}`.toLowerCase();
+          const combined = `${s.topic} ${s.name} ${s.program}`.toLowerCase();
           matchKeyword = combined.includes(activeKeyword.toLowerCase());
         }
 
@@ -253,96 +253,81 @@
         let matchSearch = true;
         if (searchQuery.trim() !== '') {
           const q = searchQuery.toLowerCase();
-          const combined = `${s.name} ${s.topic || ''} ${s.mentor || ''} ${s.degree} ${s.program}`.toLowerCase();
+          const combined = `${s.name} ${s.topic} ${s.mentor || ''} ${s.degree} ${s.program} ${s.year || ''}`.toLowerCase();
           matchSearch = combined.includes(q);
         }
 
         return matchDegree && matchKeyword && matchSearch;
       });
 
-      countBadge.textContent = `${filtered.length} Researchers`;
+      countBadge.textContent = `${filtered.length} Active Topics`;
 
       if (filtered.length === 0) {
-        gridContainer.innerHTML = `
-          <div class="col-span-1 md:col-span-2 py-10 text-center text-xs text-gray-400 italic">
+        listContainer.innerHTML = `
+          <div class="py-12 text-center text-xs text-gray-400 italic">
             No active research topics matched your search filters.
           </div>
         `;
         return;
       }
 
-      gridContainer.innerHTML = filtered.map(s => {
-        const hasPhoto = s.image && s.image.trim() !== '';
-        const hasTopic = s.topic && s.topic.trim() !== '';
-        const topicText = hasTopic ? s.topic : 'General Research in Natural Language Processing & Data Mining';
-
+      listContainer.innerHTML = filtered.map(s => {
         return `
-          <div class="p-4 bg-white border border-gray-200/80 rounded-lg shadow-2xs hover:shadow-xs transition-shadow flex flex-col justify-between space-y-3">
-            <div class="space-y-2">
-              <div class="flex items-start gap-3">
-                ${hasPhoto ? `
-                  <img 
-                    src="${s.image}" 
-                    alt="${s.name}" 
-                    class="w-12 h-14 object-cover object-top rounded border border-gray-200 shrink-0"
-                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-                  >
-                  <div class="w-12 h-14 bg-sky-50 text-sky-700 font-bold text-sm rounded border border-sky-100 hidden items-center justify-center shrink-0">
-                    ${s.name.split(' ').map(n=>n[0]).join('')}
-                  </div>
-                ` : `
-                  <div class="w-12 h-14 bg-gray-100 text-gray-500 font-bold text-xs rounded border border-gray-200 flex items-center justify-center shrink-0">
-                    ${s.name.split(' ').map(n=>n[0]).join('')}
-                  </div>
-                `}
-
-                <div class="min-w-0 flex-1">
-                  <h3 class="text-sm font-bold text-gray-900">${s.name}</h3>
-                  <div class="text-[11px] text-gray-500 font-medium">
-                    ${s.degree} &bull; ${s.program}
-                  </div>
-                  ${s.mentor ? `
-                    <div class="text-[10px] text-gray-400 mt-0.5">
-                      Advisor: ${s.mentor}
-                    </div>
-                  ` : ''}
-                </div>
+          <div class="p-4 sm:p-5 hover:bg-gray-50/75 transition-colors flex flex-col md:flex-row md:items-start justify-between gap-3 sm:gap-4">
+            <div class="space-y-2 flex-1 min-w-0">
+              <div class="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-sky-50 text-sky-800 border border-sky-200/60 shrink-0">
+                  ${s.degree}
+                </span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono text-gray-600 bg-gray-100 shrink-0">
+                  ${s.program}
+                </span>
+                ${s.year ? `
+                  <span class="text-[10px] font-mono text-gray-400 shrink-0">
+                    ${s.year}
+                  </span>
+                ` : ''}
               </div>
 
-              <!-- Topic Banner -->
-              ${hasTopic ? `
-                <div class="pt-1">
-                  <div class="text-[10px] font-mono text-gray-400 font-semibold uppercase tracking-wider mb-0.5">Investigation Topic:</div>
-                  <div class="text-xs text-gray-900 font-medium leading-snug bg-gray-50/80 p-2.5 rounded border border-gray-200/60">
-                    ${s.topic}
-                  </div>
+              <h3 class="text-sm sm:text-base font-bold text-gray-900 leading-snug">
+                &ldquo;${s.topic}&rdquo;
+              </h3>
+
+              <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-gray-500 pt-0.5">
+                <div>
+                  <span class="text-gray-400">Researcher:</span> 
+                  <strong class="text-gray-800 font-medium">${s.name}</strong>
                 </div>
-              ` : ''}
+                ${s.mentor ? `
+                  <span class="text-gray-300 hidden sm:inline">&bull;</span>
+                  <div>
+                    <span class="text-gray-400">Advisor:</span> 
+                    <span class="text-gray-700">${s.mentor}</span>
+                  </div>
+                ` : ''}
+              </div>
             </div>
 
-            <!-- Footer & Links -->
-            <div class="pt-2 border-t border-gray-100 flex items-center justify-between text-xs">
-              <span class="text-[10px] font-mono text-gray-400">
-                ${s.year ? s.year : 'Active Researcher'}
-              </span>
-              <div class="flex items-center gap-2">
-                ${s.linkedin ? `
-                  <a 
-                    href="${s.linkedin}" 
-                    target="_blank" 
-                    class="inline-flex items-center gap-1 text-[11px] font-semibold text-[#0a66c2] hover:underline"
-                    title="LinkedIn Profile"
-                  >
-                    <span>LinkedIn</span> &rarr;
-                  </a>
-                ` : ''}
+            <div class="flex items-center gap-2.5 shrink-0 pt-1 md:pt-0">
+              ${s.linkedin ? `
                 <a 
-                  href="./people.html" 
-                  class="text-[11px] text-gray-500 hover:text-sky-700"
+                  href="${s.linkedin}" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1 text-[11px] font-semibold text-[#0a66c2] hover:underline"
+                  title="LinkedIn Profile"
                 >
-                  Bio
+                  <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.6a1.67 1.67 0 1 0 0 3.34 1.67 1.67 0 0 0 0-3.34z"/></svg>
+                  <span>LinkedIn</span> &rarr;
                 </a>
-              </div>
+              ` : ''}
+              <a 
+                href="./people.html" 
+                class="text-[11px] text-gray-500 hover:text-sky-700 font-medium"
+                title="View in People Directory"
+              >
+                Member Profile &rarr;
+              </a>
             </div>
           </div>
         `;
