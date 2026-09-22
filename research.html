@@ -161,6 +161,7 @@
           <div class="flex gap-2">
             <select id="degree-filter" class="px-2.5 py-1.5 text-xs border border-gray-300 rounded bg-white focus:outline-none">
               <option value="all">All Degrees</option>
+              <option value="Postdoc">Postdoctoral Researchers</option>
               <option value="Ph.D.">Ph.D. Candidates</option>
               <option value="M.Sc.">M.Sc. Researchers</option>
             </select>
@@ -243,7 +244,8 @@
       const filtered = allActiveWithTopics.filter(s => {
         // Degree match
         let matchDegree = true;
-        if (degreeFilter === 'Ph.D.') matchDegree = s.degree && s.degree.includes('Ph.D.');
+        if (degreeFilter === 'Postdoc') matchDegree = s.degree && (s.degree.includes('Postdoc') || s.degree.includes('Post-Doc'));
+        else if (degreeFilter === 'Ph.D.') matchDegree = s.degree && s.degree.includes('Ph.D.');
         else if (degreeFilter === 'M.Sc.') matchDegree = s.degree && s.degree.includes('M.Sc.');
 
         // Keyword match
