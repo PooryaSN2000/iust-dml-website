@@ -149,37 +149,25 @@
         <a href="./people.html" class="text-xs text-sky-700 hover:underline shrink-0 font-medium">View Full Member Directory &rarr;</a>
       </div>
 
-      <!-- Live Search and Topic Filter Chips for Active Student Research -->
-      <div class="p-3 bg-gray-50 border border-gray-200/80 rounded space-y-2.5">
+      <!-- Live Search and Degree Filter for Active Student Research -->
+      <div class="p-3 bg-gray-50 border border-gray-200/80 rounded">
         <div class="flex flex-col sm:flex-row gap-2">
           <div class="relative flex-1">
             <input 
               type="text" 
               id="student-search-input" 
-              placeholder="Search by student name, topic keyword (e.g., RAG, Reasoning, KG), or supervisor..." 
+              placeholder="Search by student name, research topic, advisor, or program..." 
               class="w-full px-3 py-1.5 text-xs border border-gray-300 rounded bg-white focus:outline-none focus:border-sky-600 transition-colors"
             >
           </div>
           <div class="flex gap-2">
-            <select id="degree-filter" class="px-2.5 py-1.5 text-xs border border-gray-300 rounded bg-white focus:outline-none">
+            <select id="degree-filter" class="px-2.5 py-1.5 text-xs border border-gray-300 rounded bg-white focus:outline-none text-gray-700">
               <option value="all">All Degrees</option>
               <option value="Postdoc">Postdoctoral Researchers</option>
               <option value="Ph.D.">Ph.D. Candidates</option>
               <option value="M.Sc.">M.Sc. Researchers</option>
             </select>
           </div>
-        </div>
-
-        <!-- Topic Chips -->
-        <div class="flex flex-wrap items-center gap-1.5 text-xs pt-1 border-t border-gray-200/60" id="filter-chips">
-          <span class="text-[11px] text-gray-400 font-semibold mr-1">Research Area:</span>
-          <button data-category="all" class="topic-chip font-bold text-sky-700 px-2.5 py-1 rounded bg-sky-50 border border-sky-200 cursor-pointer shadow-2xs">All (24)</button>
-          <button data-category="rag" class="topic-chip text-gray-600 hover:text-sky-700 px-2.5 py-1 rounded bg-white border border-gray-200 cursor-pointer">RAG &amp; GraphRAG (6)</button>
-          <button data-category="reasoning" class="topic-chip text-gray-600 hover:text-sky-700 px-2.5 py-1 rounded bg-white border border-gray-200 cursor-pointer">LLM Reasoning &amp; Alignment (7)</button>
-          <button data-category="kg" class="topic-chip text-gray-600 hover:text-sky-700 px-2.5 py-1 rounded bg-white border border-gray-200 cursor-pointer">Knowledge Graphs &amp; Semantic Web (8)</button>
-          <button data-category="retrieval" class="topic-chip text-gray-600 hover:text-sky-700 px-2.5 py-1 rounded bg-white border border-gray-200 cursor-pointer">Information Retrieval &amp; Search (8)</button>
-          <button data-category="multimodal" class="topic-chip text-gray-600 hover:text-sky-700 px-2.5 py-1 rounded bg-white border border-gray-200 cursor-pointer">Multimodal AI &amp; Robotics (8)</button>
-          <button data-category="applied" class="topic-chip text-gray-600 hover:text-sky-700 px-2.5 py-1 rounded bg-white border border-gray-200 cursor-pointer">Anomaly Detection &amp; Applied AI (4)</button>
         </div>
       </div>
 
@@ -232,80 +220,13 @@
     const listContainer = document.getElementById('student-topics-list');
     const searchInput = document.getElementById('student-search-input');
     const degreeSelect = document.getElementById('degree-filter');
-    const chipButtons = document.querySelectorAll('.topic-chip');
     const countBadge = document.getElementById('topics-count-badge');
 
-    let activeCategory = 'all';
     let searchQuery = '';
     let degreeFilter = 'all';
 
-    // Academic Research Categories Definition
-    const CATEGORY_DEFINITIONS = {
-      all: {
-        label: 'All',
-        terms: []
-      },
-      rag: {
-        label: 'RAG & GraphRAG',
-        terms: ['rag', 'retrieval-augmented', 'graphrag', 'hallucination', 'graph-augmented']
-      },
-      reasoning: {
-        label: 'LLM Reasoning & Alignment',
-        terms: ['reasoning', 'preference optimization', 'prompt engineering', 'chain-of-thought', 'cot', 'argumentation', 'latent space', 'world model', 'tuning methods']
-      },
-      kg: {
-        label: 'Knowledge Graphs & Semantic Web',
-        terms: ['knowledge graph', 'entity alignment', 'semantic web', 'graph neural', 'graphrag', 'graph-augmented', 'graph-based', 'graph compression']
-      },
-      retrieval: {
-        label: 'Information Retrieval & Search',
-        terms: ['retrieval', 'query-document', 'late-interaction', 'visually rich documents', 'vrd', 'multi-hop qa', 'qa accuracy']
-      },
-      multimodal: {
-        label: 'Multimodal AI & Robotics',
-        terms: ['multimodal', 'vlm', 'robotics', 'task planning', 'visually rich', 'world model', 'medical image']
-      },
-      applied: {
-        label: 'Anomaly Detection & Applied AI',
-        terms: ['anomaly detection', 'smart meter', 'edge computing', 'user representation', 'text classification', 'deep unrolled', 'deep unfolding']
-      }
-    };
-
-    // Helper: Determine research categories for each student topic
-    function getStudentCategories(s) {
-      const text = `${s.topic} ${s.degree || ''} ${s.program || ''} ${s.name || ''}`.toLowerCase();
-      const matched = [];
-      for (const [key, cfg] of Object.entries(CATEGORY_DEFINITIONS)) {
-        if (key === 'all') continue;
-        if (cfg.terms.some(term => text.includes(term))) {
-          matched.push(key);
-        }
-      }
-      return matched;
-    }
-
     // Only include active researchers with defined research topics
     const allActiveWithTopics = (studentsData.active || []).filter(s => s.topic && s.topic.trim() !== '');
-
-    // Dynamic Live Counts for Chips
-    function updateChipCounts() {
-      const counts = { all: allActiveWithTopics.length };
-      for (const key of Object.keys(CATEGORY_DEFINITIONS)) {
-        if (key !== 'all') counts[key] = 0;
-      }
-      allActiveWithTopics.forEach(s => {
-        const cats = getStudentCategories(s);
-        cats.forEach(c => { if (counts[c] !== undefined) counts[c]++; });
-      });
-
-      chipButtons.forEach(btn => {
-        const cat = btn.getAttribute('data-category');
-        if (cat && CATEGORY_DEFINITIONS[cat]) {
-          const count = counts[cat] || 0;
-          btn.textContent = `${CATEGORY_DEFINITIONS[cat].label} (${count})`;
-        }
-      });
-    }
 
     function renderStudents() {
       const filtered = allActiveWithTopics.filter(s => {
@@ -315,20 +236,15 @@
         else if (degreeFilter === 'Ph.D.') matchDegree = s.degree && s.degree.includes('Ph.D.');
         else if (degreeFilter === 'M.Sc.') matchDegree = s.degree && s.degree.includes('M.Sc.');
 
-        // Category match
-        const studentCats = getStudentCategories(s);
-        const matchCategory = (activeCategory === 'all') || studentCats.includes(activeCategory);
-
-        // Search text match
+        // Search text match across student name, topic, advisor, degree, program, and year
         let matchSearch = true;
         if (searchQuery.trim() !== '') {
           const q = searchQuery.toLowerCase();
-          const catLabels = studentCats.map(k => CATEGORY_DEFINITIONS[k].label).join(' ');
-          const combined = `${s.name} ${s.topic} ${s.mentor || ''} ${s.degree} ${s.program} ${s.year || ''} ${catLabels}`.toLowerCase();
+          const combined = `${s.name} ${s.topic} ${s.mentor || ''} ${s.degree} ${s.program} ${s.year || ''}`.toLowerCase();
           matchSearch = combined.includes(q);
         }
 
-        return matchDegree && matchCategory && matchSearch;
+        return matchDegree && matchSearch;
       });
 
       countBadge.textContent = `${filtered.length} Active Topics`;
@@ -336,7 +252,7 @@
       if (filtered.length === 0) {
         listContainer.innerHTML = `
           <div class="py-12 text-center text-xs text-gray-400 italic">
-            No active research topics matched your search filters.
+            No active research topics matched your search query.
           </div>
         `;
         return;
@@ -344,11 +260,6 @@
 
       listContainer.innerHTML = filtered.map(s => {
         const studentSlug = s.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-        const studentCats = getStudentCategories(s);
-        const catBadgesHtml = studentCats.map(catKey => {
-          const cfg = CATEGORY_DEFINITIONS[catKey];
-          return `<span class="px-2 py-0.5 rounded text-[10px] font-mono text-sky-800 bg-sky-50/90 border border-sky-200/70 shrink-0 font-medium">${cfg.label}</span>`;
-        }).join('');
 
         return `
           <div class="p-4 sm:p-5 hover:bg-gray-50/75 transition-colors flex flex-col md:flex-row md:items-start justify-between gap-3 sm:gap-4">
@@ -365,7 +276,6 @@
                     ${s.year}
                   </span>
                 ` : ''}
-                ${catBadgesHtml}
               </div>
 
               <h3 class="text-sm sm:text-base font-bold text-gray-900 leading-snug">
@@ -424,18 +334,6 @@
       renderStudents();
     };
 
-    chipButtons.forEach(btn => {
-      btn.onclick = () => {
-        chipButtons.forEach(b => {
-          b.className = 'topic-chip text-gray-600 hover:text-sky-700 px-2.5 py-1 rounded bg-white border border-gray-200 cursor-pointer';
-        });
-        btn.className = 'topic-chip font-bold text-sky-700 px-2.5 py-1 rounded bg-sky-50 border border-sky-200 cursor-pointer shadow-2xs';
-        activeCategory = btn.getAttribute('data-category') || 'all';
-        renderStudents();
-      };
-    });
-
-    updateChipCounts();
     renderStudents();
 
     // 2. RENDER LANDMARK SYSTEMS & DATASETS
