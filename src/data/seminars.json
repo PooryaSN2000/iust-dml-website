@@ -127,6 +127,14 @@
       "title": "Analysis and Mitigation of Path Hallucination in Multi-Hop Reasoning of Knowledge Graph-Augmented LLMs",
       "date": "1405/06/22 (Sep 12, 2026)",
       "status": "Completed"
+    },
+    {
+      "id": "gen-17",
+      "speaker": "Zahra Amiri",
+      "mentor": "Dr. Khademi & Prof. Minaei",
+      "title": "Enhancing Entity Alignment in Knowledge Graphs through a Combination of Semantic and Structural Embeddings",
+      "date": "1405/07/06 (Sep 27, 2026)",
+      "status": "Completed"
     }
   ],
   "series_class_1404": [
@@ -151,7 +159,7 @@
     {
       "session": 3,
       "date": "1405/07/08 (Sep 29, 2026)",
-      "status": "Scheduled",
+      "status": "Completed",
       "speaker1": "Amirhossein Karami",
       "topic1": "World Models in Multimodal AI: Survey of Reasoning and Planning in Latent Space",
       "speaker2": "Mohammad Hossein Karimi",
